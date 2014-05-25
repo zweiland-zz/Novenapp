@@ -7,7 +7,7 @@
 	color: "#000"
 },
 "#currentDate": {
-	top: "20%",
+	top: "15%",
 	font: {
 		fontSize: "10sp"
 	}
@@ -17,7 +17,7 @@
 	color: Alloy.CFG.purple,
 	font: {
 		fontFamily: Alloy.CFG.SegoeLight,
-		fontSize: "12sp"
+		fontSize: "16sp"
 	}
 },
 "#buttonOraciones": {
@@ -25,7 +25,7 @@
 	color: Alloy.CFG.maroon,
 	font: {
 		fontFamily: Alloy.CFG.SegoeLight,
-		fontSize: "12sp"
+		fontSize: "16sp"
 	}
 },
 "#buttonCanciones": {
@@ -33,6 +33,6 @@
 	color: Alloy.CFG.maroon,
 	font: {
 		fontFamily: Alloy.CFG.SegoeLight,
-		fontSize: "12sp"
+		fontSize: "16sp"
 	}
 }

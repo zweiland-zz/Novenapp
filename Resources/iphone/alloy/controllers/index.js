@@ -26,7 +26,7 @@ function Controller() {
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
         color: "#000",
-        top: "20%",
+        top: "15%",
         font: {
             fontSize: "10sp"
         },
@@ -40,7 +40,7 @@ function Controller() {
         top: "35%",
         font: {
             fontFamily: Alloy.CFG.SegoeLight,
-            fontSize: "12sp"
+            fontSize: "16sp"
         },
         text: "Empezar la novena para hoy",
         id: "empezarTexto"
@@ -53,7 +53,7 @@ function Controller() {
         bottom: "25%",
         font: {
             fontFamily: Alloy.CFG.SegoeLight,
-            fontSize: "12sp"
+            fontSize: "16sp"
         },
         text: "Oraciones",
         id: "buttonOraciones"
@@ -66,7 +66,7 @@ function Controller() {
         bottom: "10%",
         font: {
             fontFamily: Alloy.CFG.SegoeLight,
-            fontSize: "12sp"
+            fontSize: "16sp"
         },
         text: "Canciones",
         id: "buttonCanciones"

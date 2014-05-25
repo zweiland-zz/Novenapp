@@ -28,7 +28,7 @@ function Controller() {
         color: "#000",
         top: "20%",
         font: {
-            fontSize: "12sp"
+            fontSize: "10sp"
         },
         id: "currentDate"
     });
@@ -39,7 +39,8 @@ function Controller() {
         color: Alloy.CFG.purple,
         top: "35%",
         font: {
-            fontFamily: Alloy.CFG.SegoeLight
+            fontFamily: Alloy.CFG.SegoeLight,
+            fontSize: "12sp"
         },
         text: "Empezar la novena para hoy",
         id: "empezarTexto"
@@ -51,7 +52,8 @@ function Controller() {
         color: Alloy.CFG.maroon,
         bottom: "25%",
         font: {
-            fontFamily: Alloy.CFG.SegoeLight
+            fontFamily: Alloy.CFG.SegoeLight,
+            fontSize: "12sp"
         },
         text: "Oraciones",
         id: "buttonOraciones"
@@ -63,7 +65,8 @@ function Controller() {
         color: Alloy.CFG.maroon,
         bottom: "10%",
         font: {
-            fontFamily: Alloy.CFG.SegoeLight
+            fontFamily: Alloy.CFG.SegoeLight,
+            fontSize: "12sp"
         },
         text: "Canciones",
         id: "buttonCanciones"
@@ -74,15 +77,6 @@ function Controller() {
     var currentDate = Alloy.CFG.currentMonth + "/" + Alloy.CFG.currentDay + "/" + Alloy.CFG.currentYear;
     var currentDateString = Alloy.CFG.currentDay + " de " + Alloy.CFG.currentSpanishMonthName + " del " + Alloy.CFG.currentYear;
     $.currentDate.text = currentDateString;
-    $.empezarTexto.addEventListener("click", function() {
-        alert("empezarTexto");
-    });
-    $.buttonOraciones.addEventListener("click", function() {
-        alert("buttonOraciones");
-    });
-    $.buttonCanciones.addEventListener("click", function() {
-        alert("buttonCanciones");
-    });
     var fDate, lDate, cDate;
     var fDate = "12/16/" + Alloy.CFG.currentYear;
     var lDate = "12/24/" + Alloy.CFG.currentYear;
@@ -110,7 +104,16 @@ function Controller() {
 
           default:        }
     });
-    lDate >= cDate && cDate >= fDate ? alert("We're ready!") : alert.show();
+    lDate >= cDate && cDate >= fDate;
+    $.empezarTexto.addEventListener("click", function() {
+        Ti.API.info("empezar");
+    });
+    $.buttonOraciones.addEventListener("click", function() {
+        Ti.API.info("orraciones");
+    });
+    $.buttonCanciones.addEventListener("click", function() {
+        Ti.API.info("canciones");
+    });
     $.index.open();
     _.extend($, exports);
 }

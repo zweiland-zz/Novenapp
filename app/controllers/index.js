@@ -1,20 +1,7 @@
 
 var currentDate = Alloy.CFG.currentMonth + "/" + Alloy.CFG.currentDay + "/" + Alloy.CFG.currentYear;
 var currentDateString = Alloy.CFG.currentDay + " de " + Alloy.CFG.currentSpanishMonthName + " del " + Alloy.CFG.currentYear;
-
 $.currentDate.text = currentDateString;
-
-$.empezarTexto.addEventListener("click", function(e){
-	alert('empezarTexto');
-});
-
-$.buttonOraciones.addEventListener("click", function(e){
-	alert('buttonOraciones');	
-});
-
-$.buttonCanciones.addEventListener("click", function(e){
-	alert('buttonCanciones');
-});
 
 // If it's not December 16 - 24 of current year display alert
 var fDate,lDate,cDate;
@@ -52,12 +39,20 @@ alert.addEventListener('click', function(e) {
   }
 });
 
-
 if((cDate <= lDate && cDate >= fDate)) {
-    alert("We're ready!");
+    //alert("It's go time!");
 } else {
-	alert.show();
+	//alert.show();
 }
 
+$.empezarTexto.addEventListener("click", function(){
+	Ti.API.info("empezar");
+});
+$.buttonOraciones.addEventListener("click", function(){
+	Ti.API.info("orraciones");	
+});
+$.buttonCanciones.addEventListener("click", function(){
+	Ti.API.info("canciones");
+});
 
 $.index.open();

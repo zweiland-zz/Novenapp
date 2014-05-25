@@ -9,27 +9,30 @@
 "#currentDate": {
 	top: "20%",
 	font: {
-		fontSize: "12sp"
+		fontSize: "10sp"
 	}
 },
 "#empezarTexto": {
 	top: "35%",
 	color: Alloy.CFG.purple,
 	font: {
-		fontFamily: Alloy.CFG.SegoeLight
+		fontFamily: Alloy.CFG.SegoeLight,
+		fontSize: "12sp"
 	}
 },
 "#buttonOraciones": {
 	bottom: "25%",
 	color: Alloy.CFG.maroon,
 	font: {
-		fontFamily: Alloy.CFG.SegoeLight
+		fontFamily: Alloy.CFG.SegoeLight,
+		fontSize: "12sp"
 	}
 },
 "#buttonCanciones": {
 	bottom: "10%",
 	color: Alloy.CFG.maroon,
 	font: {
-		fontFamily: Alloy.CFG.SegoeLight
+		fontFamily: Alloy.CFG.SegoeLight,
+		fontSize: "12sp"
 	}
 }

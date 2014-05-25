@@ -1,8 +1,5 @@
 <Alloy>
 	<Window class="container">
 		<Require type="view" src="partials/header"></Require>
-		<Label id="label" onClick="doClick">Novenapp</Label>
-		
-		<View id="empezar-texto">Empezar la novena para hoy</View>
 	</Window>
 </Alloy>

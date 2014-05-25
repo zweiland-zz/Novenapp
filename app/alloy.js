@@ -26,6 +26,7 @@ Alloy.CFG.currentDay = Alloy.CFG.currentTime.getDate();
 Alloy.CFG.currenMonth = Alloy.CFG.currentTime.getMonth();
 Alloy.CFG.currentYear = Alloy.CFG.currentTime.getFullYear();
 
+//Titanium.API.info(Alloy.CFG.currentTime + " " + Alloy.CFG.currentHours + ":" + Alloy.CFG.currentMinutes + " Date: " + Alloy.CFG.currentMonth + " " + Alloy.CFG.currentDay + ", " + Alloy.CFG.currentYear);
 
 // see if on ios7
 // Function to test if device is iOS 7 or later

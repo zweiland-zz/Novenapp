@@ -6,19 +6,9 @@
 	"env:development": {}, 
 	"env:test": {}, 
 	"env:production": {}, 
-	"os:android": {
-		"SegoeLight": "segoeuil",
-		"SegoeSemilight": "segoeuisl",
-		"SegoeBold": "seguisb",
-		"OS": "android"
-	},
+	"os:android": {},
 	"os:blackberry": {},
-	"os:ios": {
-		"SegoeLight": "segoeuil",
-		"SegoeSemilight": "segoeuisl",
-		"SegoeBold": "seguisb",
-		"OS": "ios"
-	},
+	"os:ios": {},
 	"os:mobileweb": {},
 	"dependencies": {}
 }

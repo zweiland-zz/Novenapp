@@ -6,10 +6,17 @@ function Controller() {
     arguments[0] ? arguments[0]["__itemTemplate"] : null;
     var $ = this;
     var exports = {};
-    $.__views.header = Ti.UI.createView({
-        backgroundColor: "#1b1464",
-        height: Alloy.CFG.headerHeight,
+    $.__views.statusBarPadding = Ti.UI.createView({
         top: 0,
+        backgroundColor: Alloy.CFG.purple,
+        height: Alloy.CFG.iosTop,
+        id: "statusBarPadding"
+    });
+    $.__views.statusBarPadding && $.addTopLevelView($.__views.statusBarPadding);
+    $.__views.header = Ti.UI.createView({
+        backgroundColor: Alloy.CFG.purple,
+        height: Alloy.CFG.headerHeight,
+        top: Alloy.CFG.iosTop,
         zIndex: 5,
         id: "header"
     });

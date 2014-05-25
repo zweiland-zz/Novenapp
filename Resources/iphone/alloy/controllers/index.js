@@ -11,8 +11,8 @@ function Controller() {
     var exports = {};
     var __defers = {};
     $.__views.index = Ti.UI.createWindow({
-        backgroundColor: "white",
-        top: Alloy.CFG.iosTop,
+        backgroundColor: "red",
+        top: 0,
         height: Ti.UI.FILL,
         id: "index"
     });
@@ -31,10 +31,14 @@ function Controller() {
     });
     $.__views.index.add($.__views.label);
     doClick ? $.__views.label.addEventListener("click", doClick) : __defers["$.__views.label!click!doClick"] = true;
+    $.__views.__alloyId1 = Ti.UI.createView({
+        id: "__alloyId1"
+    });
+    $.__views.index.add($.__views.__alloyId1);
     exports.destroy = function() {};
     _.extend($, $.__views);
     $.index.open();
-    alert(Alloy.CFG.iosTop);
+    Titanium.API.info(Alloy.CFG.currentTime + " " + Alloy.CFG.currentHours + ":" + Alloy.CFG.currentMinutes + " Date: " + Alloy.CFG.currentMonth + " " + Alloy.CFG.currentDay + ", " + Alloy.CFG.currentYear);
     __defers["$.__views.label!click!doClick"] && $.__views.label.addEventListener("click", doClick);
     _.extend($, exports);
 }

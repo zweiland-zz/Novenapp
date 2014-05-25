@@ -10,8 +10,18 @@
 //
 // Alloy.Globals.someGlobalFunction = function(){};
 
-
+Alloy.CFG.purple = "#1b1464";
+Alloy.CFG.yellow = "#ffd122";
 Alloy.CFG.headerHeight = 44.5;
+
+
+Alloy.CFG.currentTime = new Date();
+Alloy.CFG.currentHours = Alloy.CFG.currentTime.getHours();
+Alloy.CFG.currentMinutes = Alloy.CFG.currentTime.getMinutes();
+Alloy.CFG.currentMonth = Alloy.CFG.currentTime.getMonth() + 1;
+Alloy.CFG.currentDay = Alloy.CFG.currentTime.getDate();
+Alloy.CFG.currenMonth = Alloy.CFG.currentTime.getMonth();
+Alloy.CFG.currentYear = Alloy.CFG.currentTime.getFullYear();
 
 
 // see if on ios7

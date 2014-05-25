@@ -4,4 +4,8 @@ function doClick(e) {
 
 $.index.open();
 
-alert(Alloy.CFG.iosTop);
+Titanium.API.info(Alloy.CFG.currentTime + " " + Alloy.CFG.currentHours + ":" + Alloy.CFG.currentMinutes + " Date: " + Alloy.CFG.currentMonth + " " + Alloy.CFG.currentDay + ", " + Alloy.CFG.currentYear); 
+
+
+
+

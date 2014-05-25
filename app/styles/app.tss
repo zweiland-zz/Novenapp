@@ -2,18 +2,26 @@
 	backgroundColor:'red'
 },
 ".container[platform=ios]": {
-	top: Alloy.CFG.iosTop
+	top: 0
 },
 ".container": {
-	backgroundColor: "#fff",
+	backgroundColor: "red",
 	top: 0,
 	height: Ti.UI.FILL
 },
 ".header": {
-	backgroundColor:"#1b1464",
+	backgroundColor: Alloy.CFG.purple,
 	height: Alloy.CFG.headerHeight,
 	top: 0,
 	zIndex: 5
+},
+".header[platform=ios]": {
+	top: Alloy.CFG.iosTop
+},
+"#statusBarPadding": {
+	top: 0,
+	backgroundColor: Alloy.CFG.purple,
+	height: Alloy.CFG.iosTop	
 },
 "#brand": {
 	color: "#FFF"

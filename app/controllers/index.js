@@ -40,9 +40,9 @@ alert.addEventListener('click', function(e) {
 });
 
 if((cDate <= lDate && cDate >= fDate)) {
-    //alert("It's go time!");
+    TI.API.info("It's go time!");
 } else {
-	//alert.show();
+	alert.show();
 }
 
 $.empezarTexto.addEventListener("click", function(){

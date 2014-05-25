@@ -104,7 +104,7 @@ function Controller() {
 
           default:        }
     });
-    lDate >= cDate && cDate >= fDate;
+    lDate >= cDate && cDate >= fDate ? TI.API.info("It's go time!") : alert.show();
     $.empezarTexto.addEventListener("click", function() {
         Ti.API.info("empezar");
     });

@@ -10,11 +10,14 @@
 //
 // Alloy.Globals.someGlobalFunction = function(){};
 
+// color globals
 Alloy.CFG.purple = "#1b1464";
 Alloy.CFG.yellow = "#ffd122";
+
+// height / width globals
 Alloy.CFG.headerHeight = 44.5;
 
-
+// date and time globals
 Alloy.CFG.currentTime = new Date();
 Alloy.CFG.currentHours = Alloy.CFG.currentTime.getHours();
 Alloy.CFG.currentMinutes = Alloy.CFG.currentTime.getMinutes();

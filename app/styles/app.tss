@@ -25,4 +25,7 @@
 },
 "#brand": {
 	color: "#FFF"
+},
+"#empezar-texto": {
+	color: Alloy.CFG.purple
 }

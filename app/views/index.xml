@@ -3,6 +3,6 @@
 		<Require type="view" src="partials/header"></Require>
 		<Label id="label" onClick="doClick">Novenapp</Label>
 		
-		<View id=""></View>
+		<View id="empezar-texto">Empezar la novena para hoy</View>
 	</Window>
 </Alloy>

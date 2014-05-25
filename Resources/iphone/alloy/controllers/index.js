@@ -83,17 +83,34 @@ function Controller() {
     $.buttonCanciones.addEventListener("click", function() {
         alert("buttonCanciones");
     });
-    Ti.API.info(currentDate);
-    var dateFrom = "4/16/" + Alloy.CFG.currentYear;
-    var dateTo = "12/24/" + Alloy.CFG.currentYear;
-    var dateCheck = currentDate;
-    var d1 = dateFrom.split("/");
-    var d2 = dateTo.split("/");
-    var c = dateCheck.split("/");
-    var from = new Date(d1[2], d1[1] - 1, d1[0]);
-    var to = new Date(d2[2], d2[1] - 1, d2[0]);
-    var check = new Date(c[2], c[1] - 1, c[0]);
-    Ti.API.info(check > from && to > check);
+    var fDate, lDate, cDate;
+    var fDate = "12/16/" + Alloy.CFG.currentYear;
+    var lDate = "12/24/" + Alloy.CFG.currentYear;
+    var cDate = currentDate;
+    fDate = Date.parse(fDate);
+    lDate = Date.parse(lDate);
+    cDate = Date.parse(cDate);
+    var alert = Titanium.UI.createAlertDialog({
+        title: "La novena no ha empezado!",
+        message: "Si desea ver las oraciones individuales, \nvisite la sección de “Oraciones",
+        buttonNames: [ "Cerrar", 'Ir a "Oraciones"' ],
+        cancel: 0
+    });
+    alert.addEventListener("click", function(e) {
+        Titanium.API.info("e = " + JSON.stringify(e));
+        if (e.cancel === e.index || true === e.cancel) return;
+        switch (e.index) {
+          case 0:
+            Titanium.API.info("Clicked button 0 (Cerrar)");
+            break;
+
+          case 1:
+            Titanium.API.info('Clicked button 1 (Ir a "Oraciones") Now go to Oraciones page');
+            break;
+
+          default:        }
+    });
+    lDate >= cDate && cDate >= fDate ? alert("We're ready!") : alert.show();
     $.index.open();
     _.extend($, exports);
 }

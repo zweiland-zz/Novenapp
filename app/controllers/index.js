@@ -17,21 +17,47 @@ $.buttonCanciones.addEventListener("click", function(e){
 });
 
 // If it's not December 16 - 24 of current year display alert
-Ti.API.info(currentDate);
+var fDate,lDate,cDate;
 
-var dateFrom = "4/16/"+Alloy.CFG.currentYear;
-var dateTo = "12/24/"+Alloy.CFG.currentYear;
-var dateCheck = currentDate;
+var fDate = "12/16/" + Alloy.CFG.currentYear;
+var lDate = "12/24/" + Alloy.CFG.currentYear;
+var cDate = currentDate;
 
-var d1 = dateFrom.split("/");
-var d2 = dateTo.split("/");
-var c = dateCheck.split("/");
+fDate = Date.parse(fDate);
+lDate = Date.parse(lDate);
+cDate = Date.parse(cDate);
 
-var from  = new Date(d1[2], d1[1]-1, d1[0]);  // -1 because months are from 0 to 11
-var to    = new Date(d2[2], d2[1]-1, d2[0]);
-var check = new Date(c[2], c[1]-1, c[0]);
+var alert = Titanium.UI.createAlertDialog({ title: 'La novena no ha empezado!', message: 'Si desea ver las oraciones individuales, 
+visite la sección de “Oraciones', buttonNames: ['Cerrar', 'Ir a "Oraciones"'], cancel: 0 });
 
-Ti.API.info(check > from && check < to);
+alert.addEventListener('click', function(e) { 
+	Titanium.API.info('e = ' + JSON.stringify(e));
+	
+   //Clicked cancel, first check is for iphone, second for android
+   if (e.cancel === e.index || e.cancel === true) {
+      return;
+   }
+
+   //now you can use parameter e to switch/case
+   switch (e.index) {
+      case 0: Titanium.API.info('Clicked button 0 (Cerrar)');
+      break;
+
+      //This will never be reached, if you specified cancel for index 1
+      case 1: Titanium.API.info('Clicked button 1 (Ir a "Oraciones") Now go to Oraciones page');
+      break;
+
+      default:
+      break;
+  }
+});
+
+
+if((cDate <= lDate && cDate >= fDate)) {
+    alert("We're ready!");
+} else {
+	alert.show();
+}
 
 
 $.index.open();

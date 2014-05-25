@@ -35,8 +35,14 @@
                 <false/>
                 <key>UIStatusBarStyle</key>
                 <string>UIStatusBarStyleLightContent</string>
+                <key>UIAppFonts</key>
+                <array>
+                    <string>fonts/segoeuil.tff</string>
+                    <string>fonts/segoeuisl.tff</string>
+                    <string>fonts/seguisb.tff</string>
+                </array>
             </dict>
-        </plist>
+        </plist>       
     </ios>
     <android xmlns:android="http://schemas.android.com/apk/res/android"/>
     <mobileweb>

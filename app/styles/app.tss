@@ -1,11 +1,10 @@
 "Window": {
-	backgroundColor:'red'
+	backgroundColor:'#f8f8f8'
 },
 ".container[platform=ios]": {
 	top: 0
 },
 ".container": {
-	backgroundColor: "red",
 	top: 0,
 	height: Ti.UI.FILL
 },
@@ -25,7 +24,4 @@
 },
 "#brand": {
 	color: "#FFF"
-},
-"#empezar-texto": {
-	color: Alloy.CFG.purple
 }

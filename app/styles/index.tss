@@ -5,4 +5,31 @@
 	width: Ti.UI.SIZE,
 	height: Ti.UI.SIZE,
 	color: "#000"
+},
+"#currentDate": {
+	top: "20%",
+	font: {
+		fontSize: "12sp"
+	}
+},
+"#empezarTexto": {
+	top: "30%",
+	color: Alloy.CFG.purple,
+	font: {
+		fontFamily: Alloy.CFG.SegoeLight
+	}
+},
+"#buttonOraciones": {
+	bottom: "20%",
+	color: Alloy.CFG.maroon,
+	font: {
+		fontFamily: Alloy.CFG.SegoeLight
+	}
+},
+"#buttonCanciones": {
+	bottom: "10%",
+	color: Alloy.CFG.maroon,
+	font: {
+		fontFamily: Alloy.CFG.SegoeLight
+	}
 }

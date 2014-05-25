@@ -13,6 +13,7 @@
 // color globals
 Alloy.CFG.purple = "#1b1464";
 Alloy.CFG.yellow = "#ffd122";
+Alloy.CFG.maroon = "#6d0c10";
 
 // height / width globals
 Alloy.CFG.headerHeight = 44.5;

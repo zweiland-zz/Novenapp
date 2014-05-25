@@ -7,7 +7,7 @@ function Controller() {
     var $ = this;
     var exports = {};
     $.__views.index = Ti.UI.createWindow({
-        backgroundColor: "white",
+        backgroundColor: "#f8f8f8",
         top: 0,
         height: Ti.UI.FILL,
         id: "index"
@@ -37,7 +37,7 @@ function Controller() {
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
         color: Alloy.CFG.purple,
-        top: "30%",
+        top: "35%",
         font: {
             fontFamily: Alloy.CFG.SegoeLight
         },
@@ -49,7 +49,7 @@ function Controller() {
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
         color: Alloy.CFG.maroon,
-        bottom: "20%",
+        bottom: "25%",
         font: {
             fontFamily: Alloy.CFG.SegoeLight
         },
@@ -71,7 +71,8 @@ function Controller() {
     $.__views.__alloyId1.add($.__views.buttonCanciones);
     exports.destroy = function() {};
     _.extend($, $.__views);
-    var currentDateString = Alloy.CFG.currentDay + " de ";
+    var currentDate = Alloy.CFG.currentMonth + "/" + Alloy.CFG.currentDay + "/" + Alloy.CFG.currentYear;
+    var currentDateString = Alloy.CFG.currentDay + " de " + Alloy.CFG.currentSpanishMonthName + " del " + Alloy.CFG.currentYear;
     $.currentDate.text = currentDateString;
     $.empezarTexto.addEventListener("click", function() {
         alert("empezarTexto");
@@ -82,6 +83,17 @@ function Controller() {
     $.buttonCanciones.addEventListener("click", function() {
         alert("buttonCanciones");
     });
+    Ti.API.info(currentDate);
+    var dateFrom = "4/16/" + Alloy.CFG.currentYear;
+    var dateTo = "12/24/" + Alloy.CFG.currentYear;
+    var dateCheck = currentDate;
+    var d1 = dateFrom.split("/");
+    var d2 = dateTo.split("/");
+    var c = dateCheck.split("/");
+    var from = new Date(d1[2], d1[1] - 1, d1[0]);
+    var to = new Date(d2[2], d2[1] - 1, d2[0]);
+    var check = new Date(c[2], c[1] - 1, c[0]);
+    Ti.API.info(check > from && to > check);
     $.index.open();
     _.extend($, exports);
 }

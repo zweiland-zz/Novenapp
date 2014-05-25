@@ -19,10 +19,21 @@ Alloy.CFG.maroon = "#6d0c10";
 Alloy.CFG.headerHeight = 44.5;
 
 // date and time globals
+
+var spanishMonthNames = [ "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+    "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" ];
+    
+var englishMonthNames = [ "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December" ];
+
 Alloy.CFG.currentTime = new Date();
 Alloy.CFG.currentHours = Alloy.CFG.currentTime.getHours();
 Alloy.CFG.currentMinutes = Alloy.CFG.currentTime.getMinutes();
 Alloy.CFG.currentMonth = Alloy.CFG.currentTime.getMonth() + 1;
+
+Alloy.CFG.currentSpanishMonthName = spanishMonthNames[Alloy.CFG.currentTime.getMonth()];
+Alloy.CFG.currentEnglishMonthName = englishMonthNames[Alloy.CFG.currentTime.getMonth()];
+
 Alloy.CFG.currentDay = Alloy.CFG.currentTime.getDate();
 Alloy.CFG.currenMonth = Alloy.CFG.currentTime.getMonth();
 Alloy.CFG.currentYear = Alloy.CFG.currentTime.getFullYear();

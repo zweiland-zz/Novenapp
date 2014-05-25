@@ -1,5 +1,5 @@
 ".container": {
-	backgroundColor:"white"
+	
 },
 "Label": {
 	width: Ti.UI.SIZE,
@@ -13,14 +13,14 @@
 	}
 },
 "#empezarTexto": {
-	top: "30%",
+	top: "35%",
 	color: Alloy.CFG.purple,
 	font: {
 		fontFamily: Alloy.CFG.SegoeLight
 	}
 },
 "#buttonOraciones": {
-	bottom: "20%",
+	bottom: "25%",
 	color: Alloy.CFG.maroon,
 	font: {
 		fontFamily: Alloy.CFG.SegoeLight

@@ -20,7 +20,7 @@
 "#statusBarPadding": {
 	top: 0,
 	backgroundColor: Alloy.CFG.purple,
-	height: Alloy.CFG.iosTop	
+	height: Alloy.CFG.iosTop
 },
 "#brand": {
 	color: "#FFF"

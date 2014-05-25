@@ -1,0 +1,20 @@
+"Window": {
+	backgroundColor:'red'
+},
+".container[platform=ios]": {
+	top: Alloy.CFG.iosTop
+},
+".container": {
+	backgroundColor: "#fff",
+	top: 0,
+	height: Ti.UI.FILL
+},
+".header": {
+	backgroundColor:"#1b1464",
+	height: Alloy.CFG.headerHeight,
+	top: 0,
+	zIndex: 5
+},
+"#brand": {
+	color: "#FFF"
+}

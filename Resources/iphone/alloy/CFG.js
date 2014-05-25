@@ -1,0 +1,1 @@
+module.exports={"dependencies":{},"purple":"#1b1464","yellow":"#ffd122"};

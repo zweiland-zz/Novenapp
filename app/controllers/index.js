@@ -3,3 +3,5 @@ function doClick(e) {
 }
 
 $.index.open();
+
+alert(Alloy.CFG.iosTop);

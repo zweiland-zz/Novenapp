@@ -24,4 +24,27 @@
 },
 "#brand": {
 	color: "#FFF"
+},
+
+// Header
+"#backToMenu": {
+	width: '25%', height: '100%',
+	backgroundColor: 'transparent',
+	left: 0
+},
+".back-to-menu-arrow": {
+	width: '9sp', height: '16sp',
+	left: '10%'
+},
+"#menuLabel": {
+	color: 'white',
+	left: '30%',
+	font: {
+		fontSize: '14sp'
+	}
+},
+
+// Colors
+".white": {
+	color: 'white'
 }

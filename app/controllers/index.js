@@ -32,6 +32,7 @@ alert.addEventListener('click', function(e) {
 
       //This will never be reached, if you specified cancel for index 1
       case 1: Titanium.API.info('Clicked button 1 (Ir a "Oraciones") Now go to Oraciones page');
+      			Alloy.createController("oraciones").getView().open();	
       break;
 
       default:
@@ -45,14 +46,19 @@ if((cDate <= lDate && cDate >= fDate)) {
 	alert.show();
 }
 
+// Click Events
+
 $.empezarTexto.addEventListener("click", function(){
 	Ti.API.info("empezar");
 });
+
 $.buttonOraciones.addEventListener("click", function(){
-	Ti.API.info("orraciones");	
+	Ti.API.info("Oraciones");
+	Alloy.createController("oraciones").getView().open();
 });
 $.buttonCanciones.addEventListener("click", function(){
-	Ti.API.info("canciones");
+	Ti.API.info("Canciones");
+	Alloy.createController("canciones").getView().open();
 });
 
 $.index.open();

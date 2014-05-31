@@ -1,5 +1,6 @@
 ".container": {
-	
+	backgroundColor: Alloy.CFG.purple,
+	backgroundImage: 'images/global/background_1-blur.jpg'
 },
 "Label": {
 	width: Ti.UI.SIZE,
@@ -8,13 +9,14 @@
 },
 "#currentDate": {
 	top: "15%",
+	color: 'white',
 	font: {
 		fontSize: "10sp"
 	}
 },
 "#empezarTexto": {
 	top: "35%",
-	color: Alloy.CFG.purple,
+	color: 'white',
 	font: {
 		fontFamily: Alloy.CFG.SegoeLight,
 		fontSize: "16sp"
@@ -22,7 +24,7 @@
 },
 "#buttonOraciones": {
 	bottom: "25%",
-	color: Alloy.CFG.maroon,
+	color: 'white',
 	font: {
 		fontFamily: Alloy.CFG.SegoeLight,
 		fontSize: "16sp"
@@ -30,7 +32,7 @@
 },
 "#buttonCanciones": {
 	bottom: "10%",
-	color: Alloy.CFG.maroon,
+	color: 'white',
 	font: {
 		fontFamily: Alloy.CFG.SegoeLight,
 		fontSize: "16sp"

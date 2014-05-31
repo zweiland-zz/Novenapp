@@ -1,0 +1,8 @@
+<Alloy>
+	<Window class="container">
+		<Require id="headerInternal" type="view" src="partials/headerInternal"></Require>
+		<View>
+			<Label>Canciones</Label>
+		</View>
+	</Window>
+</Alloy>

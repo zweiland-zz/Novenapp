@@ -1,0 +1,10 @@
+<Alloy>
+	<View id="statusBarPadding"></View>
+	<View id="header" class="header">
+		<View id="backToMenu">
+			<ImageView class="back-to-menu-arrow" image="images/global/back-to-menu-arrow.png"></ImageView>
+			<Label id="menuLabel">Menu</Label>
+		</View>
+		<Label id="brand">Novenapp</Label>
+	</View>
+</Alloy>

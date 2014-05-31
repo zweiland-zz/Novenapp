@@ -7,36 +7,37 @@ function Controller() {
     var $ = this;
     var exports = {};
     $.__views.index = Ti.UI.createWindow({
-        backgroundColor: "#f8f8f8",
+        backgroundColor: Alloy.CFG.purple,
         top: 0,
         height: Ti.UI.FILL,
+        backgroundImage: "images/global/background_1-blur.jpg",
         id: "index"
     });
     $.__views.index && $.addTopLevelView($.__views.index);
-    $.__views.__alloyId0 = Alloy.createController("partials/header", {
-        id: "__alloyId0",
+    $.__views.__alloyId2 = Alloy.createController("partials/header", {
+        id: "__alloyId2",
         __parentSymbol: $.__views.index
     });
-    $.__views.__alloyId0.setParent($.__views.index);
-    $.__views.__alloyId1 = Ti.UI.createView({
-        id: "__alloyId1"
+    $.__views.__alloyId2.setParent($.__views.index);
+    $.__views.__alloyId3 = Ti.UI.createView({
+        id: "__alloyId3"
     });
-    $.__views.index.add($.__views.__alloyId1);
+    $.__views.index.add($.__views.__alloyId3);
     $.__views.currentDate = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
-        color: "#000",
+        color: "white",
         top: "15%",
         font: {
             fontSize: "10sp"
         },
         id: "currentDate"
     });
-    $.__views.__alloyId1.add($.__views.currentDate);
+    $.__views.__alloyId3.add($.__views.currentDate);
     $.__views.empezarTexto = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
-        color: Alloy.CFG.purple,
+        color: "white",
         top: "35%",
         font: {
             fontFamily: Alloy.CFG.SegoeLight,
@@ -45,11 +46,11 @@ function Controller() {
         text: "Empezar la novena para hoy",
         id: "empezarTexto"
     });
-    $.__views.__alloyId1.add($.__views.empezarTexto);
+    $.__views.__alloyId3.add($.__views.empezarTexto);
     $.__views.buttonOraciones = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
-        color: Alloy.CFG.maroon,
+        color: "white",
         bottom: "25%",
         font: {
             fontFamily: Alloy.CFG.SegoeLight,
@@ -58,11 +59,11 @@ function Controller() {
         text: "Oraciones",
         id: "buttonOraciones"
     });
-    $.__views.__alloyId1.add($.__views.buttonOraciones);
+    $.__views.__alloyId3.add($.__views.buttonOraciones);
     $.__views.buttonCanciones = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
-        color: Alloy.CFG.maroon,
+        color: "white",
         bottom: "10%",
         font: {
             fontFamily: Alloy.CFG.SegoeLight,
@@ -71,7 +72,7 @@ function Controller() {
         text: "Canciones",
         id: "buttonCanciones"
     });
-    $.__views.__alloyId1.add($.__views.buttonCanciones);
+    $.__views.__alloyId3.add($.__views.buttonCanciones);
     exports.destroy = function() {};
     _.extend($, $.__views);
     var currentDate = Alloy.CFG.currentMonth + "/" + Alloy.CFG.currentDay + "/" + Alloy.CFG.currentYear;
@@ -100,6 +101,7 @@ function Controller() {
 
           case 1:
             Titanium.API.info('Clicked button 1 (Ir a "Oraciones") Now go to Oraciones page');
+            Alloy.createController("oraciones").getView().open();
             break;
 
           default:        }
@@ -109,10 +111,12 @@ function Controller() {
         Ti.API.info("empezar");
     });
     $.buttonOraciones.addEventListener("click", function() {
-        Ti.API.info("orraciones");
+        Ti.API.info("Oraciones");
+        Alloy.createController("oraciones").getView().open();
     });
     $.buttonCanciones.addEventListener("click", function() {
-        Ti.API.info("canciones");
+        Ti.API.info("Canciones");
+        Alloy.createController("canciones").getView().open();
     });
     $.index.open();
     _.extend($, exports);

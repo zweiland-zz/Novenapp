@@ -1,0 +1,5 @@
+".container": {
+	backgroundColor: Alloy.CFG.purple,
+	backgroundImage: 'images/global/background_2-blur.jpg',
+	color: 'white'
+}

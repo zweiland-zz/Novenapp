@@ -62,4 +62,6 @@ function isiOS7Plus()
 // set global variable for top
 Alloy.CFG.iosTop = isiOS7Plus() ? 20 : 0;
 
+Alloy.CFG.belowHeader = Alloy.CFG.iosTop + Alloy.CFG.headerHeight;
+
 

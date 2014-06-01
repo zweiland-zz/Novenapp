@@ -2,8 +2,4 @@
 	backgroundColor: Alloy.CFG.purple,
 	backgroundImage: 'images/global/background_1-blur.jpg',
 	color: 'white'
-},
-"#cancionesSoporte": {
-	top: Alloy.CFG.belowHeader,
-	backgroundColor: 'red'
 }

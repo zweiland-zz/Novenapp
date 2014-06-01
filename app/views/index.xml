@@ -1,11 +1,13 @@
 <Alloy>
-	<Window class="container">
-		<Require type="view" src="partials/header"></Require>
-		<View>
-			<Label id="currentDate"></Label>
-			<Label id="empezarTexto">Empezar la novena para hoy</Label>
-			<Label id="buttonOraciones">Oraciones</Label>
-			<Label id="buttonCanciones">Canciones</Label>
-		</View>
-	</Window>
+	<NavigationWindow id="win1" platform="ios">
+		<Window class="container">
+			<Require type="view" src="partials/header"></Require>
+			<View>
+				<Label id="currentDate"></Label>
+				<Label id="empezarTexto">Empezar la novena para hoy</Label>
+				<Label id="buttonOraciones">Oraciones</Label>
+				<Label id="buttonCanciones">Canciones</Label>
+			</View>
+		</Window>
+	</NavigationWindow>
 </Alloy>

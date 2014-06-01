@@ -6,23 +6,22 @@ function Controller() {
     arguments[0] ? arguments[0]["__itemTemplate"] : null;
     var $ = this;
     var exports = {};
-    $.__views.index = Ti.UI.createWindow({
+    $.__views.__alloyId2 = Ti.UI.createWindow({
         backgroundColor: Alloy.CFG.purple,
         top: 0,
         height: Ti.UI.FILL,
         backgroundImage: "images/global/background_1-blur.jpg",
-        id: "index"
+        id: "__alloyId2"
     });
-    $.__views.index && $.addTopLevelView($.__views.index);
-    $.__views.__alloyId2 = Alloy.createController("partials/header", {
-        id: "__alloyId2",
-        __parentSymbol: $.__views.index
+    $.__views.__alloyId3 = Alloy.createController("partials/header", {
+        id: "__alloyId3",
+        __parentSymbol: $.__views.__alloyId2
     });
-    $.__views.__alloyId2.setParent($.__views.index);
-    $.__views.__alloyId3 = Ti.UI.createView({
-        id: "__alloyId3"
+    $.__views.__alloyId3.setParent($.__views.__alloyId2);
+    $.__views.__alloyId4 = Ti.UI.createView({
+        id: "__alloyId4"
     });
-    $.__views.index.add($.__views.__alloyId3);
+    $.__views.__alloyId2.add($.__views.__alloyId4);
     $.__views.currentDate = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
@@ -33,7 +32,7 @@ function Controller() {
         },
         id: "currentDate"
     });
-    $.__views.__alloyId3.add($.__views.currentDate);
+    $.__views.__alloyId4.add($.__views.currentDate);
     $.__views.empezarTexto = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
@@ -46,7 +45,7 @@ function Controller() {
         text: "Empezar la novena para hoy",
         id: "empezarTexto"
     });
-    $.__views.__alloyId3.add($.__views.empezarTexto);
+    $.__views.__alloyId4.add($.__views.empezarTexto);
     $.__views.buttonOraciones = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
@@ -59,7 +58,7 @@ function Controller() {
         text: "Oraciones",
         id: "buttonOraciones"
     });
-    $.__views.__alloyId3.add($.__views.buttonOraciones);
+    $.__views.__alloyId4.add($.__views.buttonOraciones);
     $.__views.buttonCanciones = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
@@ -72,7 +71,12 @@ function Controller() {
         text: "Canciones",
         id: "buttonCanciones"
     });
-    $.__views.__alloyId3.add($.__views.buttonCanciones);
+    $.__views.__alloyId4.add($.__views.buttonCanciones);
+    $.__views.win1 = Ti.UI.iOS.createNavigationWindow({
+        window: $.__views.__alloyId2,
+        id: "win1"
+    });
+    $.__views.win1 && $.addTopLevelView($.__views.win1);
     exports.destroy = function() {};
     _.extend($, $.__views);
     var currentDate = Alloy.CFG.currentMonth + "/" + Alloy.CFG.currentDay + "/" + Alloy.CFG.currentYear;
@@ -116,9 +120,11 @@ function Controller() {
     });
     $.buttonCanciones.addEventListener("click", function() {
         Ti.API.info("Canciones");
-        Alloy.createController("canciones").getView().open();
+        var winCanciones = Alloy.createController("canciones").getView();
+        $.win1.openWindow(winCanciones);
+        $.win1.open();
     });
-    $.index.open();
+    $.index.win1.open();
     _.extend($, exports);
 }
 

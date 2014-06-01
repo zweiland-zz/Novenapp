@@ -37,4 +37,6 @@ Alloy.CFG.currentYear = Alloy.CFG.currentTime.getFullYear();
 
 Alloy.CFG.iosTop = isiOS7Plus() ? 20 : 0;
 
+Alloy.CFG.belowHeader = Alloy.CFG.iosTop + Alloy.CFG.headerHeight;
+
 Alloy.createController("index");

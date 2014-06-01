@@ -58,7 +58,11 @@ $.buttonOraciones.addEventListener("click", function(){
 });
 $.buttonCanciones.addEventListener("click", function(){
 	Ti.API.info("Canciones");
-	Alloy.createController("canciones").getView().open();
+	//Alloy.createController("canciones").getView().open();
+	
+	var winCanciones = Alloy.createController('canciones').getView();
+	$.win1.openWindow(winCanciones);
+	$.win1.open();	
 });
 
-$.index.open();
+$.index.win1.open();

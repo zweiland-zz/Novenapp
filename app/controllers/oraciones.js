@@ -1,10 +1,16 @@
 
 $.headerInternal.brand.setText('Oraciones');
 
+// functions
+function goBack(e) {
+	$.oraciones.close();
+}
+
 $.headerInternal.backToMenu.addEventListener('click', function (e) {
-	Alloy.createController("index").getView().open();
+	goBack();
 });
 
+$.cancionesSoporte
 
 /*
  * open window

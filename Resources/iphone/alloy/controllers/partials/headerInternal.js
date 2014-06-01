@@ -29,14 +29,14 @@ function Controller() {
         id: "backToMenu"
     });
     $.__views.header.add($.__views.backToMenu);
-    $.__views.__alloyId6 = Ti.UI.createImageView({
+    $.__views.__alloyId7 = Ti.UI.createImageView({
         width: "9sp",
         height: "16sp",
         left: "10%",
         image: "images/global/back-to-menu-arrow.png",
-        id: "__alloyId6"
+        id: "__alloyId7"
     });
-    $.__views.backToMenu.add($.__views.__alloyId6);
+    $.__views.backToMenu.add($.__views.__alloyId7);
     $.__views.menuLabel = Ti.UI.createLabel({
         color: "white",
         left: "30%",

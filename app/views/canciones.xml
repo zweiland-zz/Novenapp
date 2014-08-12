@@ -1,0 +1,8 @@
+<Alloy>
+	<Window class="container" id="winCanciones">
+		<Require id="headerInternal" type="view" src="partials/headerInternal"></Require>
+		<ScrollView id="cancionesSoporte" layout="vertical" showVerticalScrollIndicator="true" showHorizontalScrollIndicator="false">
+			<View id="view" backgroundColor="green" top="0" height="2000" />
+		</ScrollView>
+	</Window>
+</Alloy>
